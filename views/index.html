@@ -38,7 +38,7 @@
                     <th>Last Name</th>
                     <th>Phone</th>
                 </tr>
-                <tr ng-repeat="person in personArray track by $index">
+                <tr ng-repeat="person in personArrayCtrl track by $index">
                     <td>{{person.firstName}}</td>
                     <td>{{person.lastName}}</td>
                     <td>{{person.phone}}</td>
@@ -58,9 +58,19 @@
             </ol>
         </div>
         
+        <div ng-controller="appCtrl2">
+            asdfasdfs
+            <ol>
+                <li ng-repeat="test in sampleArray2 track by $index">{{test.firstName}}</li>
+            </ol>
+            <button ng-click="testService()">update service val</button>
+        </div>
+        
         <!--JS Dependencies-->
         <script type="text/javascript" src="/node_modules/angular/angular.js"></script>
         <script type="text/javascript" src="/scripts/app.js"></script>
         <script type="text/javascript" src="/scripts/controllers/appCtrl.js"></script>
+        <script type="text/javascript" src="/scripts/controllers/appCtrl2.js"></script>
+        <script type="text/javascript" src="/scripts/services/person.js"></script>
     </body>
 </html>
